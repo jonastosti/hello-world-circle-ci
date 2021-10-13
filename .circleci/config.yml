@@ -18,7 +18,7 @@ jobs:
           name: "Print my name"
           command: echo {$MY_NAME_VAR} > output.txt
       - persist_to_workspace:
-          root: /tmp/dir
+          root: /tmp
           paths:
             - output.txt
 # Invoke jobs via workflows
