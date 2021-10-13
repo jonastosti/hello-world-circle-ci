@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Print my name"
-          command: echo {$MY_NAME_VAR} > /tmp/output.txt
+          command: echo "Olá Jonas!" > /tmp/output.txt
       - persist_to_workspace:
           root: /tmp
           paths:
