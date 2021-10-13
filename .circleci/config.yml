@@ -21,6 +21,15 @@ jobs:
           root: /tmp
           paths:
             - output.txt
+  print_output_file:
+     docker:
+      - image: cimg/base:stable
+     steps:
+       - attach_workspace:
+           at: /tmp/output.txt
+       - run:
+          name: "Print file content"
+          command: cat output.txt
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
