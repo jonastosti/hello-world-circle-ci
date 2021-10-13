@@ -50,6 +50,10 @@ jobs:
         - image: circleci/node:13.8.0
       steps:
         - run: return 1
+        - run:
+            name: Print Error Message
+            command: echo "ERRRORRRR"
+            when: on_fail
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
